@@ -30,7 +30,7 @@ defmodule Matrix do
   def generate([h|_] = c) do
     # error check
     for l <- c do
-      if length(c) != length(l), do: raise "math error <generate@matrix.ex>"
+      if length(h) != length(l), do: raise "math error <generate@matrix.ex>"
     end
     %Matrix{line: length(c), row: length(h), contents: c}
   end
